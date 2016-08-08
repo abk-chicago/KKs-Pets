@@ -23,6 +23,8 @@ public class ScheduleActivity extends AppCompatActivity {
         }
     }
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +36,10 @@ public class ScheduleActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                composeEmail();
+                Snackbar.make(view, "Email KK's Pet Sitting now", Snackbar.LENGTH_LONG)
+                        .setAction("Email", null).show();
+
             }
         });
 

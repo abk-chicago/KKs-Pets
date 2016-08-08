@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ShareActionProvider;
 import android.widget.TextView;
@@ -23,9 +24,10 @@ import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    Intent mLoginIntent;
     GoogleApiClient mGoogleApiClient;
     private ShareActionProvider mShareActionProvider;
+    Button btnLogin;
 
     public void composeEmail() {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
@@ -34,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
-
 
 
     @Override
@@ -75,6 +76,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnLogin = (Button) findViewById(R.id.btn_login);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mLoginIntent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(mLoginIntent);
+            }
+        });
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -90,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -99,30 +108,5 @@ public class MainActivity extends AppCompatActivity {
         // Return true to display menu
         return true;
 
-    }
-
-    // Call to update the share intent
-    private void setShareIntent(Intent shareIntent) {
-        if (mShareActionProvider != null) {
-            mShareActionProvider.setShareIntent(shareIntent);
-        }
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-
-//        if (id == R.id.toolbarShare) {
-//        getMenuInflater().inflate(R.menu.share_menu, menu);
-//        MenuItem item = menu.findItem(R.id.action_share);
-//        mShareActionProvider = (ShareActionProvider) item.getActionProvider();
-//            return true;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
     }
 }
