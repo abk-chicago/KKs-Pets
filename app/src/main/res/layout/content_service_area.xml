@@ -13,29 +13,34 @@
     tools:showIn="@layout/activity_service_area">
 
     <TextView
+        android:id="@+id/service"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/service"
-        android:textStyle="bold"
-        android:text="@string/service"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:text="@string/service"
+        android:textStyle="bold" />
 
 <EditText
+    android:id="@+id/editView"
     android:layout_width="200dp"
     android:layout_height="60dp"
-    android:id="@+id/editView"
-    android:layout_below="@+id/service"
-    android:layout_alignParentStart="true">
+    android:layout_alignParentStart="true"
+    android:layout_below="@+id/service">
 
 </EditText>
     <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/submit"
-        android:id="@+id/button"
         android:layout_alignBottom="@+id/editView"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/mybutton"
+        android:paddingEnd="9dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingStart="9dp"
+        android:text="@string/submit" />
 
     <!-- map fragment goes here -->
 

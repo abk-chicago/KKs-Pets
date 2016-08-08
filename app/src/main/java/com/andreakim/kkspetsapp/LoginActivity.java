@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class LoginActivity extends AppCompatActivity {
-Intent mScheduleIntent;
+Intent mServiceIntent;
     Button mBtnSkip;
 
     public void composeEmail() {
@@ -43,8 +43,8 @@ Intent mScheduleIntent;
         mBtnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mScheduleIntent = new Intent(LoginActivity.this, ScheduleActivity.class);
-                startActivity(mScheduleIntent);
+                mServiceIntent = new Intent(LoginActivity.this, ServiceAreaActivity.class);
+                startActivity(mServiceIntent);
             }
         });
 
