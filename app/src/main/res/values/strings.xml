@@ -12,7 +12,11 @@
     <string name="main">main</string>
     <string name="schedule_it">schedule it!</string>
     <string name="schedule">Schedule your pet care here (or send an email)</string>
-    <string name="service">See if you are in the service area</string>
+    <string name="service">Enter your zip code to see if you are in the service area:</string>
     <string name="title_activity_schedule">ScheduleActivity</string>
+    <string name="title_activity_service_area">ServiceAreaActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="login">Existing clients, please log in to schedule pet care or change information</string>
+    <string name="others">All others, please continue without login to check if you are in our service area. For additional information on pricing and policies, please visit our website.</string>
 </resources>
 

@@ -30,6 +30,14 @@
         <activity
             android:name=".ScheduleActivity"
             android:label="@string/title_activity_schedule"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ServiceAreaActivity"
+            android:label="@string/title_activity_service_area"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
             android:theme="@style/AppTheme"></activity>
     </application>
 
