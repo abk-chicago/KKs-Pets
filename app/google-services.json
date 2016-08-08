@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "136901433987",
+    "project_id": "kks-pets"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136901433987:android:2a7ef844909e347e",
+        "android_client_info": {
+          "package_name": "com.andreakim.kkspetsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136901433987-2u3amkm73dmta4kq0covdrag14qr01c3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.andreakim.kkspetsapp",
+            "certificate_hash": "850B77E886FA1104787EFA93BAFC4EF59D966904"
+          }
+        },
+        {
+          "client_id": "136901433987-cja7ov7qjd8mjjdojdni23d8id5t51rg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfyWdBUFIDc5uRjHtDikigPnCSz5HYr70"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">KK\'s Pet Sitting Client App</string>
+    <string name="action_settings">Settings</string>
+    <string name="history">Established in 2005, KK\'s Pet Sitting has been one of the most trusted and respected pet care services in the Northern Chicago area. For 11 years, we have strived to be your pets\' second family.  Thank you for trusting us with your beloved animals.</string>
+    <string name="news">Yelp! reviews</string>
+    <string name="website">Website</string>
+    <string name="title_activity_reviews">ReviewsActivity</string>
+    <string name="share">share</string>
+    <string name="title_activity_website">WebsiteActivity</string>
+
+</resources>
+
