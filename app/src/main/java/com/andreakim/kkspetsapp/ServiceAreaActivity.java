@@ -7,10 +7,21 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class ServiceAreaActivity extends AppCompatActivity {
+
+
+    Button mBtnSubmit;
+    String userZip;
+    Boolean mResult;
+
 
     public void composeEmail() {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
@@ -19,10 +30,13 @@ public class ServiceAreaActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service_area);
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -37,18 +51,76 @@ public class ServiceAreaActivity extends AppCompatActivity {
             }
         });
 
-
-        TextView tv_result = (TextView) findViewById(R.id.textView_result);
-
-
-        public boolean checkZip(String s) {
+        final EditText mEditField = (EditText) findViewById(R.id.editView);
+        final TextView mResultField = (TextView) findViewById(R.id.textView_result);
 
 
-        }
+        mBtnSubmit.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                try {
+                    userZip = mEditField.getText().toString();
 
-
-
-
+                    switch (userZip) {
+                        case "60659":
+                            mResult = true;
+                            mResultField.setText("@string/result_positive");
+                            break;
+                        case "60645":
+                            mResult = true;
+                            mResultField.setText("@string/result_positive");
+                            break;
+                        case "60626":
+                            mResult = true;
+                            mResultField.setText("@string/result_positive");
+                            break;
+                        case "60660":
+                            mResult = true;
+                            mResultField.setText("@string/result_positive");
+                            break;
+                        case "60646":
+                            mResult = true;
+                            mResultField.setText("@string/result_positive");
+                            break;
+                        case "60625":
+                            mResult = true;
+                            mResultField.setText("@string/result_positive");
+                            break;
+                        case "60640":
+                            mResult = true;
+                            mResultField.setText("@string/result_positive");
+                            break;
+                        case "60618":
+                            mResult = true;
+                            mResultField.setText("@string/result_positive");
+                            break;
+                        case "60613":
+                            mResult = true;
+                            mResultField.setText("@string/result_positive");
+                            break;
+                        case "60202":
+                            mResult = true;
+                            mResultField.setText("@string/result_positive");
+                            break;
+                        case "60201":
+                            mResult = true;
+                            mResultField.setText("@string/result_positive");
+                            break;
+                        case "60712":
+                            mResult = true;
+                            mResultField.setText("@string/result_positive");
+                            break;
+                        default:
+                            mResult = false;
+                            mResultField.setText("error");
+                            break;
+                    }
+                } catch (Exception e) {
+                    Log.e("", "Exception caught");
+                    e.printStackTrace();
+                    mResultField.setText("@string/result_negative");
+                }
+            }
+        });
     }
-
 }
+
