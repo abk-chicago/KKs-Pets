@@ -11,9 +11,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.util.ArrayList;
 
 public class ServiceAreaActivity extends AppCompatActivity {
 
@@ -21,7 +20,7 @@ public class ServiceAreaActivity extends AppCompatActivity {
     Button mBtnSubmit;
     String userZip;
     Boolean mResult;
-
+    ImageView iv;
 
     public void composeEmail() {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
@@ -54,6 +53,7 @@ public class ServiceAreaActivity extends AppCompatActivity {
 
 
         mBtnSubmit = (Button) findViewById(R.id.button);
+        iv = (ImageView) findViewById(R.id.staticMap);
 
         mBtnSubmit.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
@@ -113,6 +113,7 @@ public class ServiceAreaActivity extends AppCompatActivity {
                         default:
                             mResult = false;
                             mResultField.setText(no);
+                            iv.setImageResource(R.drawable.sadpatsysmall);
                             break;
                     }
                 } catch (Exception e) {

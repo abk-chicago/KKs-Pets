@@ -33,6 +33,7 @@
     android:layout_width="100dp"
     android:layout_height="60dp"
     android:inputType="number"
+    android:imeOptions="actionDone"
     android:maxLength="5"
     android:layout_marginRight="12dp"
     android:layout_marginStart="67dp">
