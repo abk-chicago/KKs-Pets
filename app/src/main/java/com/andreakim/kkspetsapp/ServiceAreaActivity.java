@@ -30,6 +30,13 @@ public class ServiceAreaActivity extends AppCompatActivity {
         }
     }
 
+
+
+    
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,50 +72,62 @@ public class ServiceAreaActivity extends AppCompatActivity {
                         case "60659":
                             mResult = true;
                             mResultField.setText(yes);
+                            iv.setImageResource(R.drawable.happypatsysmall);
                             break;
                         case "60645":
                             mResult = true;
                             mResultField.setText(yes);
+                            iv.setImageResource(R.drawable.happypatsysmall);
                             break;
                         case "60626":
                             mResult = true;
                             mResultField.setText(yes);
+                            iv.setImageResource(R.drawable.happypatsysmall);
                             break;
                         case "60660":
                             mResult = true;
                             mResultField.setText(yes);
+                            iv.setImageResource(R.drawable.happypatsysmall);
                             break;
                         case "60646":
                             mResult = true;
                             mResultField.setText(yes);
+                            iv.setImageResource(R.drawable.happypatsysmall);
                             break;
                         case "60625":
                             mResult = true;
                             mResultField.setText(yes);
+                            iv.setImageResource(R.drawable.happypatsysmall);
                             break;
                         case "60640":
                             mResult = true;
                             mResultField.setText(yes);
+                            iv.setImageResource(R.drawable.happypatsysmall);
                             break;
                         case "60618":
                             mResult = true;
                             mResultField.setText(yes);
+                            iv.setImageResource(R.drawable.happypatsysmall);
                             break;
                         case "60613":
                             mResult = true;
                             mResultField.setText(yes);
+                            iv.setImageResource(R.drawable.happypatsysmall);
                             break;
                         case "60202":
                             mResult = true;
                             mResultField.setText(yes);
+                            iv.setImageResource(R.drawable.happypatsysmall);
                             break;
                         case "60201":
                             mResult = true;
                             mResultField.setText(yes);
+                            iv.setImageResource(R.drawable.happypatsysmall);
                             break;
                         case "60712":
                             mResult = true;
                             mResultField.setText(yes);
+                            iv.setImageResource(R.drawable.happypatsysmall);
                             break;
                         default:
                             mResult = false;
