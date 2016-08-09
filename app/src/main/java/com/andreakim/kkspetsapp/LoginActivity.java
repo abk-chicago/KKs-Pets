@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class LoginActivity extends AppCompatActivity {
-Intent mServiceIntent;
+    Intent mServiceIntent;
     Button mBtnSkip;
 
     public void composeEmail() {
@@ -47,6 +47,7 @@ Intent mServiceIntent;
                 startActivity(mServiceIntent);
             }
         });
+
 
 
 

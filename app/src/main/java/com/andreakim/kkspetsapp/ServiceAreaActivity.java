@@ -36,7 +36,6 @@ public class ServiceAreaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service_area);
 
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -54,6 +53,8 @@ public class ServiceAreaActivity extends AppCompatActivity {
         final EditText mEditField = (EditText) findViewById(R.id.editView);
         final TextView mResultField = (TextView) findViewById(R.id.textView_result);
 
+
+        mBtnSubmit = (Button) findViewById(R.id.button);
 
         mBtnSubmit.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
@@ -111,13 +112,13 @@ public class ServiceAreaActivity extends AppCompatActivity {
                             break;
                         default:
                             mResult = false;
-                            mResultField.setText("error");
+                            mResultField.setText("@string/result_negative");
                             break;
                     }
                 } catch (Exception e) {
                     Log.e("", "Exception caught");
                     e.printStackTrace();
-                    mResultField.setText("@string/result_negative");
+                    mResultField.setText("Sorry, there was an error");
                 }
             }
         });
