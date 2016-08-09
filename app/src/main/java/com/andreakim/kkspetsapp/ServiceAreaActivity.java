@@ -1,5 +1,6 @@
 package com.andreakim.kkspetsapp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -31,8 +33,17 @@ public class ServiceAreaActivity extends AppCompatActivity {
     }
 
 
+    public static void hideKeyboard(Activity activity) {
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        //Find the currently focused view, so we can grab the correct window token from it.
+        View view = activity.getCurrentFocus();
+        //If no view currently has focus, create a new one, just so we can grab a window token from it
+        if (view == null) {
+            view = new View(activity);
+        }
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
 
-    
 
 
 
@@ -73,72 +84,86 @@ public class ServiceAreaActivity extends AppCompatActivity {
                             mResult = true;
                             mResultField.setText(yes);
                             iv.setImageResource(R.drawable.happypatsysmall);
+                            hideKeyboard(ServiceAreaActivity.this);
                             break;
                         case "60645":
                             mResult = true;
                             mResultField.setText(yes);
                             iv.setImageResource(R.drawable.happypatsysmall);
+                            hideKeyboard(ServiceAreaActivity.this);
                             break;
                         case "60626":
                             mResult = true;
                             mResultField.setText(yes);
                             iv.setImageResource(R.drawable.happypatsysmall);
+                            hideKeyboard(ServiceAreaActivity.this);
                             break;
                         case "60660":
                             mResult = true;
                             mResultField.setText(yes);
                             iv.setImageResource(R.drawable.happypatsysmall);
+                            hideKeyboard(ServiceAreaActivity.this);
                             break;
                         case "60646":
                             mResult = true;
                             mResultField.setText(yes);
                             iv.setImageResource(R.drawable.happypatsysmall);
+                            hideKeyboard(ServiceAreaActivity.this);
                             break;
                         case "60625":
                             mResult = true;
                             mResultField.setText(yes);
                             iv.setImageResource(R.drawable.happypatsysmall);
+                            hideKeyboard(ServiceAreaActivity.this);
                             break;
                         case "60640":
                             mResult = true;
                             mResultField.setText(yes);
                             iv.setImageResource(R.drawable.happypatsysmall);
+                            hideKeyboard(ServiceAreaActivity.this);
                             break;
                         case "60618":
                             mResult = true;
                             mResultField.setText(yes);
                             iv.setImageResource(R.drawable.happypatsysmall);
+                            hideKeyboard(ServiceAreaActivity.this);
                             break;
                         case "60613":
                             mResult = true;
                             mResultField.setText(yes);
                             iv.setImageResource(R.drawable.happypatsysmall);
+                            hideKeyboard(ServiceAreaActivity.this);
                             break;
                         case "60202":
                             mResult = true;
                             mResultField.setText(yes);
                             iv.setImageResource(R.drawable.happypatsysmall);
+                            hideKeyboard(ServiceAreaActivity.this);
                             break;
                         case "60201":
                             mResult = true;
                             mResultField.setText(yes);
                             iv.setImageResource(R.drawable.happypatsysmall);
+                            hideKeyboard(ServiceAreaActivity.this);
                             break;
                         case "60712":
                             mResult = true;
                             mResultField.setText(yes);
                             iv.setImageResource(R.drawable.happypatsysmall);
+                            hideKeyboard(ServiceAreaActivity.this);
                             break;
                         default:
                             mResult = false;
                             mResultField.setText(no);
                             iv.setImageResource(R.drawable.sadpatsysmall);
+                            hideKeyboard(ServiceAreaActivity.this);
                             break;
                     }
                 } catch (Exception e) {
                     Log.e("", "Exception caught");
                     e.printStackTrace();
                     mResultField.setText("Sorry, there was an error");
+                    hideKeyboard(ServiceAreaActivity.this);
                 }
             }
         });
