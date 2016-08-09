@@ -8,6 +8,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 public class ServiceAreaActivity extends AppCompatActivity {
 
@@ -35,6 +36,19 @@ public class ServiceAreaActivity extends AppCompatActivity {
 
             }
         });
+
+
+        TextView tv_result = (TextView) findViewById(R.id.textView_result);
+
+
+        public boolean checkZip(String s) {
+
+
+        }
+
+
+
+
     }
 
 }

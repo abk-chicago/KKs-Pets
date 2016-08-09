@@ -14,15 +14,17 @@
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/linLayout"
         android:orientation="vertical">
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="bold"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:id="@+id/schedule"
         android:layout_marginBottom="16dp"
-        android:layout_alignTop="@+id/webView"
+        android:layout_alignTop="@+id/linLayout"
         android:text="@string/schedule" />
 
     <WebView
