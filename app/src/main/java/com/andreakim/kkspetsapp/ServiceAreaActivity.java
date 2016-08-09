@@ -159,6 +159,7 @@ public class ServiceAreaActivity extends AppCompatActivity {
                             hideKeyboard(ServiceAreaActivity.this);
                             break;
                     }
+                    hideKeyboard(ServiceAreaActivity.this);
                 } catch (Exception e) {
                     Log.e("", "Exception caught");
                     e.printStackTrace();
