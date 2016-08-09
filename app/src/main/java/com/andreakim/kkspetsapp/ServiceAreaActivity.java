@@ -46,7 +46,6 @@ public class ServiceAreaActivity extends AppCompatActivity {
                 composeEmail();
                 Snackbar.make(view, "Email KK's Pet Sitting now", Snackbar.LENGTH_LONG)
                         .setAction("Email", null).show();
-
             }
         });
 
@@ -60,59 +59,60 @@ public class ServiceAreaActivity extends AppCompatActivity {
             public void onClick(View v) {
                 try {
                     userZip = mEditField.getText().toString();
-
+                    String yes = getResources().getString(R.string.result_positive);
+                    String no = getResources().getString(R.string.result_negative);
                     switch (userZip) {
                         case "60659":
                             mResult = true;
-                            mResultField.setText("@string/result_positive");
+                            mResultField.setText(yes);
                             break;
                         case "60645":
                             mResult = true;
-                            mResultField.setText("@string/result_positive");
+                            mResultField.setText(yes);
                             break;
                         case "60626":
                             mResult = true;
-                            mResultField.setText("@string/result_positive");
+                            mResultField.setText(yes);
                             break;
                         case "60660":
                             mResult = true;
-                            mResultField.setText("@string/result_positive");
+                            mResultField.setText(yes);
                             break;
                         case "60646":
                             mResult = true;
-                            mResultField.setText("@string/result_positive");
+                            mResultField.setText(yes);
                             break;
                         case "60625":
                             mResult = true;
-                            mResultField.setText("@string/result_positive");
+                            mResultField.setText(yes);
                             break;
                         case "60640":
                             mResult = true;
-                            mResultField.setText("@string/result_positive");
+                            mResultField.setText(yes);
                             break;
                         case "60618":
                             mResult = true;
-                            mResultField.setText("@string/result_positive");
+                            mResultField.setText(yes);
                             break;
                         case "60613":
                             mResult = true;
-                            mResultField.setText("@string/result_positive");
+                            mResultField.setText(yes);
                             break;
                         case "60202":
                             mResult = true;
-                            mResultField.setText("@string/result_positive");
+                            mResultField.setText(yes);
                             break;
                         case "60201":
                             mResult = true;
-                            mResultField.setText("@string/result_positive");
+                            mResultField.setText(yes);
                             break;
                         case "60712":
                             mResult = true;
-                            mResultField.setText("@string/result_positive");
+                            mResultField.setText(yes);
                             break;
                         default:
                             mResult = false;
-                            mResultField.setText("@string/result_negative");
+                            mResultField.setText(no);
                             break;
                     }
                 } catch (Exception e) {
