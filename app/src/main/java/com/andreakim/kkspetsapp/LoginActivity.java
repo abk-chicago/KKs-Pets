@@ -12,7 +12,9 @@ import android.widget.Button;
 
 public class LoginActivity extends AppCompatActivity {
     Intent mServiceIntent;
+    Intent mScheduleIntent;
     Button mBtnSkip;
+    Button mBtnLogin;
 
     public void composeEmail() {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
@@ -48,7 +50,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
+        mBtnLogin = (Button) findViewById(R.id.loginNow);
+        mBtnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mScheduleIntent = new Intent(LoginActivity.this, ScheduleActivity.class);
+                startActivity(mScheduleIntent);
+            }
+        });
 
 
     }
