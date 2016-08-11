@@ -22,5 +22,35 @@
     <string name="others">All others, please continue without login to check if you are in our service area. For additional information on pricing and policies, please visit our website.</string>
     <string name="result_positive">Yes! You are located within our service area!  Please go to our website to fill out our contact form and we will contact you soon! You may also download forms we will need when you start service with us.</string>
     <string name="result_negative">We\'re sorry, but we are not able to accommodate service in your area at this time.</string>
+
+
+
+        <string name="label_emailpassword">Email/Password Authentication</string>
+        <string name="desc_emailpassword">Use an email and password to authenticate with Firebase.</string>
+
+
+        <string name="hint_user_id">User ID</string>
+        <string name="get_custom_token">Get Token</string>
+        <string name="sign_in">Sign In</string>
+        <string name="create_account">Create Account</string>
+        <string name="sign_out">Sign Out</string>
+        <string name="disconnect">Disconnect</string>
+        <string name="loading">Loading…</string>
+        <string name="custom_token">Custom Token</string>
+        <string name="signed_out">Signed Out</string>
+        <string name="token_null">Token: null</string>
+        <string name="hint_email">Email</string>
+        <string name="hint_password">Password</string>
+        <string name="desc_firebase_lockup">Firebase logo and name</string>
+        <string name="auth_failed">Authentication failed</string>
+
+        <string name="emailpassword_status_fmt">Email User: %s</string>
+        <string name="emailpassword_title_text"></string>
+
+        <string name="id_fmt">User ID: %s</string>
+        <string name="email_fmt">Email: %s</string>
+
+
+
 </resources>
 
