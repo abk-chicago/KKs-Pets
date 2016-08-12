@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void composeEmail() {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setData(Uri.parse("mailto:andreaforanimals@gmail.com")); // only email apps should handle this
+        intent.setData(Uri.parse("mailto:andreaforanimals@gmail.com"));
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
@@ -59,8 +59,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Views
-        mStatusTextView = (TextView) findViewById(R.id.status);
 
        // mDetailTextView = (TextView) findViewById(R.id.detail);
         mEmailField = (EditText) findViewById(R.id.field_email);
@@ -119,22 +117,6 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(mServiceIntent);
             }
         });
-
-        mBtnLogin = (Button) findViewById(R.id.loginNow);
-        mBtnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mScheduleIntent = new Intent(LoginActivity.this, ScheduleActivity.class);
-                startActivity(mScheduleIntent);
-            }
-        });
-
-
-
-
-
-
-
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override

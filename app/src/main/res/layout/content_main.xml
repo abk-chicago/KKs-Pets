@@ -32,7 +32,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="12dp"
-        android:layout_toStartOf="@+id/imageView2"
+        android:layout_toStartOf="@+id/imageView"
         android:text="@string/history"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -46,12 +46,13 @@
         android:id="@+id/textViewWebsite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAlignment="viewStart"
-        android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
-        android:clickable="true"
+        android:layout_marginRight="8dp"
         android:layout_weight="1"
+        android:clickable="true"
         android:text="@string/website"
+        android:textAlignment="viewStart"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textStyle="bold"
         />
     <TextView
@@ -59,11 +60,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
-        android:textAlignment="viewEnd"
         android:layout_marginRight="8dp"
+        android:layout_weight="1"
         android:clickable="true"
         android:text="@string/news"
-        android:layout_weight="1"
+        android:textAlignment="viewEnd"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textStyle="bold" />
     </LinearLayout>
 <Button
