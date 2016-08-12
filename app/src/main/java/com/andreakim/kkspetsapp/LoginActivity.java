@@ -15,14 +15,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
     Intent mServiceIntent;
     Intent mScheduleIntent;
     Button mBtnSkip;
@@ -59,41 +58,19 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        // Views
 
-       // mDetailTextView = (TextView) findViewById(R.id.detail);
         mEmailField = (EditText) findViewById(R.id.field_email);
         mPasswordField = (EditText) findViewById(R.id.field_password);
 
 
-        // Buttons
-        mEmail = (Button)findViewById(R.id.email_sign_in_button);
-        mEmail.setOnClickListener(new View.OnClickListener() {
-        @Override
-            public void onClick(View view) {
-
-            }
-        });
-
-        mCreate = (Button)findViewById(R.id.email_create_account_button);
-        mCreate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
-        mOut = (Button)findViewById(R.id.sign_out_button);
-        mOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
+        findViewById(R.id.email_sign_in_button).setOnClickListener(this);
+        findViewById(R.id.email_create_account_button).setOnClickListener(this);
+        findViewById(R.id.sign_out_button).setOnClickListener(this);
 
         // [START initialize_auth]
         mAuth = FirebaseAuth.getInstance();
         // [END initialize_auth]
-
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -135,8 +112,6 @@ public class LoginActivity extends AppCompatActivity {
             }  // [END_EXCLUDE]
         };   // [END auth_state_listener]
 
-
-
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -151,11 +126,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         };
 
-
-
         FirebaseAuth.getInstance().signOut();
-
-
             }
 
 
@@ -183,8 +154,6 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        ba.showProgressDialog();
-
 
         // [START create_user_with_email]
         mAuth.createUserWithEmailAndPassword(email, password)
@@ -199,11 +168,8 @@ public class LoginActivity extends AppCompatActivity {
                         if (!task.isSuccessful()) {
                             Toast.makeText(LoginActivity.this, R.string.auth_failed,
                                     Toast.LENGTH_SHORT).show();
-                        }
+                            }
 
-                        // [START_EXCLUDE]
-                        ba.hideProgressDialog();
-                        // [END_EXCLUDE]
                     }
                 });
         // [END create_user_with_email]
@@ -215,7 +181,6 @@ public class LoginActivity extends AppCompatActivity {
         }
 
 
-        ba.showProgressDialog();
 
         // [START sign_in_with_email]
         mAuth.signInWithEmailAndPassword(email, password)
@@ -235,9 +200,12 @@ public class LoginActivity extends AppCompatActivity {
 
                         // [START_EXCLUDE]
                         if (!task.isSuccessful()) {
-                            mStatusTextView.setText(R.string.auth_failed);
+                            Toast.makeText(LoginActivity.this, R.string.auth_failed,
+                                    Toast.LENGTH_SHORT).show();
                         }
-                        ba.hideProgressDialog();
+                        else {
+                        mScheduleIntent = new Intent(LoginActivity.this, ScheduleActivity.class);
+                        startActivity(mScheduleIntent); }
                         // [END_EXCLUDE]
                     }
                 });
@@ -272,17 +240,17 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void updateUI(FirebaseUser user) {
-        ba.hideProgressDialog();
+
         if (user != null) {
             mStatusTextView.setText(getString(R.string.emailpassword_status_fmt, user.getEmail()));
-         //   mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
+
 
             findViewById(R.id.email_password_buttons).setVisibility(View.GONE);
             findViewById(R.id.email_password_fields).setVisibility(View.GONE);
             findViewById(R.id.sign_out_button).setVisibility(View.VISIBLE);
         } else {
             mStatusTextView.setText(R.string.signed_out);
-         //mDetailTextView.setText(null);
+
 
             findViewById(R.id.email_password_buttons).setVisibility(View.VISIBLE);
             findViewById(R.id.email_password_fields).setVisibility(View.VISIBLE);
@@ -290,7 +258,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-  //  @Override
+  @Override
     public void onClick(View v) {
         int i = v.getId();
         if (i == R.id.email_create_account_button) {
