@@ -282,7 +282,7 @@ public class LoginActivity extends AppCompatActivity {
             findViewById(R.id.sign_out_button).setVisibility(View.VISIBLE);
         } else {
             mStatusTextView.setText(R.string.signed_out);
-         //   mDetailTextView.setText(null);
+         //mDetailTextView.setText(null);
 
             findViewById(R.id.email_password_buttons).setVisibility(View.VISIBLE);
             findViewById(R.id.email_password_fields).setVisibility(View.VISIBLE);
