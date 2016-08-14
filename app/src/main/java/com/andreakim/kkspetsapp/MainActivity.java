@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.squareup.picasso.Picasso;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -45,6 +46,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        ImageView imageView = (ImageView) findViewById(R.id.imageView);
+
+        Picasso.with(this)
+                .load(R.drawable.kks)
+                .into(imageView);
 
         TextView tvw = (TextView) findViewById(R.id.textViewWebsite);
         tvw.setOnClickListener(new View.OnClickListener() {
