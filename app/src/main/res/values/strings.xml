@@ -43,7 +43,7 @@
 
     <!-- Sign-in status messages -->
     <string name="signed_in_fmt">Signed in as: %s</string>
-    <string name="signed_in">Signed in</string>
+    <string name="signed_in">You have been signed in, please click to schedule.</string>
     <string name="signing_in">Signing in…</string>
     <string name="signed_out">Signed out</string>
     <string name="signed_in_err">"Error: please check logs."</string>
