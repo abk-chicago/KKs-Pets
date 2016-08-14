@@ -5,9 +5,9 @@
     <string name="history">Established in 2005, KK\'s Pet Sitting has been one of the most trusted and respected pet care services in the Northern Chicago area. Thank you for trusting us with your beloved animals.</string>
     <string name="news">Yelp! reviews</string>
     <string name="website">Website</string>
-    <string name="title_activity_reviews">ReviewsActivity</string>
+
     <string name="share">share</string>
-    <string name="title_activity_website">WebsiteActivity</string>
+
     <string name="submit">submit</string>
     <string name="skip">continue</string>
     <string name="main">main</string>
@@ -15,9 +15,9 @@
     <string name="note">(or by email)</string>
     <string name="sched">Note: Please allow this page a moment to load if you are on a slow connection</string>
     <string name="service">Check here if you are in the KK\'s Pet Sitting service area.  For details, check our website.</string>
-    <string name="title_activity_schedule">ScheduleActivity</string>
-    <string name="title_activity_service_area">ServiceAreaActivity</string>
-    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_schedule">KK\'s Pet Sitting Client App</string>
+    <string name="title_activity_service_area">KK\'s Pet Sitting Client App</string>
+    <string name="title_activity_login">KK\'s Pet Sitting Client App</string>
     <string name="login">Existing clients, please sign in to schedule pet care</string>
     <string name="resultHint">Please enter your zip code and click the submit button</string>
     <string name="others">All others, please continue without login to check if you are in our service area. For additional information on pricing and policies, please visit our website.</string>
