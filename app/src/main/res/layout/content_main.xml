@@ -80,7 +80,7 @@
     android:paddingLeft="12dp"
     android:paddingRight="12dp"
     android:paddingStart="9dp"
-    android:text="client login"
+    android:text="@string/cl_login"
     android:textColor="#ffffff" />
 
     <ImageView

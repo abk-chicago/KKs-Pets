@@ -23,6 +23,8 @@ public class ServiceAreaActivity extends AppCompatActivity {
     String userZip;
     Boolean mResult;
     ImageView iv;
+    Button mHome;
+    Intent mHomeIntent;
 
     public void composeEmail() {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
@@ -68,6 +70,17 @@ public class ServiceAreaActivity extends AppCompatActivity {
 
         final EditText mEditField = (EditText) findViewById(R.id.editView);
         final TextView mResultField = (TextView) findViewById(R.id.textView_result);
+
+        mHome = (Button) findViewById(R.id.home_button);
+
+        mHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mHomeIntent = new Intent(ServiceAreaActivity.this, MainActivity.class);
+                startActivity(mHomeIntent);
+            }
+        });
+
 
 
         mBtnSubmit = (Button) findViewById(R.id.button);

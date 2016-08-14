@@ -11,9 +11,16 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
+
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
 
 public class ScheduleActivity extends AppCompatActivity {
 
+Button mHome;
+    Intent mHomeIntent;
 
     public void composeEmail() {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
@@ -45,6 +52,17 @@ public class ScheduleActivity extends AppCompatActivity {
 
         final String websiteURL = "http://kkspets.youcanbook.me";
 
+        mHome = (Button) findViewById(R.id.home_button);
+
+        mHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mHomeIntent = new Intent(ScheduleActivity.this, MainActivity.class);
+                startActivity(mHomeIntent);
+            }
+        });
+
+
         // wrap our page here!
         // this will be used to show our guests to print
         final WebView myWebView = (WebView) findViewById(R.id.webView);
@@ -52,5 +70,7 @@ public class ScheduleActivity extends AppCompatActivity {
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         myWebView.setWebViewClient(new WebViewClient());
+
     }
+
 }
