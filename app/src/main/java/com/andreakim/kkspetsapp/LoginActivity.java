@@ -45,9 +45,11 @@ public class LoginActivity extends AppCompatActivity implements
     private ProgressDialog mProgressDialog;
 
     Intent mServiceIntent;
+    Intent mHomeIntent;
     Intent mScheduleIntent;
     Button mBtnSkip;
     Button mBtnSchedule;
+    Button mHome;
 
 
     public void composeEmail() {
@@ -69,7 +71,15 @@ public class LoginActivity extends AppCompatActivity implements
         // Button listeners
         findViewById(R.id.sign_in_button).setOnClickListener(this);
         findViewById(R.id.sign_out_button).setOnClickListener(this);
+        mHome = (Button) findViewById(R.id.home_button);
 
+        mHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mHomeIntent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(mHomeIntent);
+            }
+        });
 
         // [START configure_signin]
         // Configure sign-in to request the user's ID, email address, and basic
@@ -240,7 +250,7 @@ public class LoginActivity extends AppCompatActivity implements
             mProgressDialog.setIndeterminate(true);
         }
 
-        mProgressDialog.show();
+     //   mProgressDialog.show();
     }
 
     private void hideProgressDialog() {

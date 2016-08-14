@@ -62,9 +62,6 @@ Button mHome;
             }
         });
 
-
-        // wrap our page here!
-        // this will be used to show our guests to print
         final WebView myWebView = (WebView) findViewById(R.id.webView);
         myWebView.loadUrl(websiteURL);
         WebSettings webSettings = myWebView.getSettings();
