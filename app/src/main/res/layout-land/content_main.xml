@@ -37,10 +37,7 @@
             android:layout_weight="5"
             android:text="@string/history"
             android:textAppearance="?android:attr/textAppearanceMedium" />
-
     </LinearLayout>
-
-
 
     <LinearLayout
 
@@ -48,11 +45,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/linearLayout1"
-        android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:weightSum="2"
-        android:orientation="horizontal">
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
         <TextView
             android:id="@+id/textViewWebsite"
@@ -75,9 +72,9 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="1"
-            android:textAlignment="textEnd"
             android:clickable="true"
             android:text="@string/news"
+            android:textAlignment="textEnd"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textStyle="bold" />
 
@@ -85,37 +82,37 @@
 
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_marginTop="16dp"
-    android:layout_below="@id/linearLayout2"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
     android:layout_alignParentBottom="true"
+    android:layout_below="@id/linearLayout2"
+    android:layout_marginTop="16dp"
+    android:orientation="horizontal"
     android:weightSum="3">
 
     <ImageView
         android:id="@+id/expertise"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_weight="1"
         android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
         android:src="@drawable/expertise" />
     <Button
         android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_weight="1"
-        android:paddingRight="4dp"
-        android:paddingLeft="4dp"
         android:background="@drawable/mybutton"
-        android:text="@string/cl_login"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="@string/cl_login" />
 
     <TextView
         android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
 </LinearLayout>
 </RelativeLayout>

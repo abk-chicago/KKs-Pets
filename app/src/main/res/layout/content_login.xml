@@ -13,63 +13,63 @@
     tools:showIn="@layout/activity_login">
 
 <LinearLayout
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:id="@+id/linearLayout"
     android:weightSum="1">
 
     <TextView
         android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/detail"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:text="@string/login"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textStyle="bold"
-        android:layout_below="@+id/detail"
-        android:layout_alignParentStart="true" />
+        android:textStyle="bold" />
 
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
         android:layout_below="@+id/login"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="24dp"
-        android:layout_gravity="center_horizontal" />
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" />
 
     <TextView
         android:id="@+id/status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:layout_marginTop="12dp"
         android:layout_alignStart="@+id/btn_login"
         android:layout_centerVertical="true"
-        android:text="@string/signed_out"
-        android:textSize="14sp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="36dp"/>
+        android:layout_marginBottom="36dp"
+        android:layout_marginTop="12dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="@string/signed_out"
+        android:textSize="14sp"/>
 
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        android:weightSum="3"
-        android:layout_height="wrap_content">
+        android:weightSum="3">
     <Button
         android:id="@+id/sign_out_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/sign_out"
-        android:background="@drawable/mybutton"/>
+        android:background="@drawable/mybutton"
+        android:text="@string/sign_out"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -79,8 +79,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="schedule"
-        android:background="@drawable/mybutton"/>
+        android:background="@drawable/mybutton"
+        android:text="schedule"/>
 
     </android.support.v7.widget.LinearLayoutCompat>
 </LinearLayout>
@@ -89,48 +89,48 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout"
         android:layout_marginTop="16dp"
         android:orientation="vertical"
         android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:layout_below="@+id/linearLayout"
-        android:layout_alignParentStart="true">
+        android:paddingRight="16dp">
 
         <TextView
             android:id="@+id/others"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="16dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/status"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="45dp"
             android:layout_weight="1"
+            android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:text="@string/others"
-            android:textStyle="italic"
-            android:layout_below="@+id/status"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="45dp"
-            android:layout_marginBottom="16dp"/>
+            android:textStyle="italic"/>
 
         <Button
             android:id="@+id/btn_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1"
-            android:background="@drawable/mybutton"
-            android:text="@string/skip"
             android:layout_below="@+id/linearLayout"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_weight="1"
+            android:background="@drawable/mybutton"
+            android:text="@string/skip"/>
     </LinearLayout>
 
     <Button
         android:id="@+id/home_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_alignParentBottom="true"
-        android:text="@string/home"
-        android:background="@drawable/mybutton" />
+        android:layout_marginTop="8dp"
+        android:background="@drawable/mybutton"
+        android:text="@string/home" />
 </RelativeLayout>
 
 
