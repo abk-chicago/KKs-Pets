@@ -16,6 +16,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 public class ServiceAreaActivity extends AppCompatActivity {
 
 
@@ -85,6 +87,12 @@ public class ServiceAreaActivity extends AppCompatActivity {
 
         mBtnSubmit = (Button) findViewById(R.id.button);
         iv = (ImageView) findViewById(R.id.staticMap);
+
+
+        ImageView imageView = (ImageView) findViewById(R.id.imageView);
+
+        Picasso.with(this).load(R.drawable.kks).into(iv);
+
 
         mBtnSubmit.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {

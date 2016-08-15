@@ -18,6 +18,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="18dp"
         android:text="@string/service"
@@ -27,6 +29,8 @@
         android:id="@+id/textView_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:text="@string/resultHint"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textStyle="bold"
@@ -36,8 +40,11 @@
 
     <ImageView
         android:layout_width="match_parent"
+        android:layout_marginTop="24dp"
         android:layout_height="140dp"
         android:layout_below="@id/textView_result"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/staticMap"
         android:layout_alignParentStart="true" />
@@ -47,6 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
         android:layout_alignParentBottom="true"
         android:text="@string/home"
         android:background="@drawable/mybutton" />
@@ -57,10 +65,9 @@
         android:layout_height="wrap_content"
         android:background="@drawable/mybutton"
         android:paddingEnd="9dp"
-        android:paddingLeft="12dp"
-        android:paddingRight="12dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:paddingStart="9dp"
-        android:layout_marginLeft="12dp"
         android:text="@string/submit"
         android:layout_below="@+id/service"
         android:layout_alignEnd="@+id/service" />
@@ -71,8 +78,9 @@
         android:layout_height="60dp"
         android:inputType="number"
         android:imeOptions="actionDone"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:maxLength="5"
-        android:layout_marginRight="12dp"
         android:layout_alignTop="@+id/button"
         android:layout_alignParentStart="true"
         android:layout_toStartOf="@+id/button">
