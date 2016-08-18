@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.andreakim.kkspetsapp">
+    package="com.andreakim.kkspetschicago">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.andreakim.kkspetschicago.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -28,15 +28,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ScheduleActivity"
+            android:name="com.andreakim.kkspetschicago.ScheduleActivity"
             android:label="@string/title_activity_schedule"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".ServiceAreaActivity"
+            android:name="com.andreakim.kkspetschicago.ServiceAreaActivity"
             android:label="@string/title_activity_service_area"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".LoginActivity"
+            android:name="com.andreakim.kkspetschicago.LoginActivity"
             android:label="@string/title_activity_login"
             android:windowSoftInputMode="adjustPan"
             android:theme="@style/AppTheme"></activity>

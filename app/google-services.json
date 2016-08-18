@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "136901433987",
-    "project_id": "kks-pets"
+    "project_number": "601730949148",
+    "project_id": "kks-pet-sitting-chicago"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:136901433987:android:2a7ef844909e347e",
+        "mobilesdk_app_id": "1:601730949148:android:0ddda9b1988b36f8",
         "android_client_info": {
-          "package_name": "com.andreakim.kkspetsapp"
+          "package_name": "com.andreakim.kkspetschicago"
         }
       },
       "oauth_client": [
         {
-          "client_id": "136901433987-2u3amkm73dmta4kq0covdrag14qr01c3.apps.googleusercontent.com",
+          "client_id": "601730949148-8ptekbl0i2645o4ne1hhjd35k75lor5j.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.andreakim.kkspetsapp",
+            "package_name": "com.andreakim.kkspetschicago",
             "certificate_hash": "850B77E886FA1104787EFA93BAFC4EF59D966904"
           }
         },
         {
-          "client_id": "136901433987-cja7ov7qjd8mjjdojdni23d8id5t51rg.apps.googleusercontent.com",
+          "client_id": "601730949148-da85dsqiljovsbo45toeppetqnhsrejb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCfyWdBUFIDc5uRjHtDikigPnCSz5HYr70"
+          "current_key": "AIzaSyBQ3t2FuFk4QOcO12hWYhXQ7inOKZaHrXU"
         }
       ],
       "services": {
