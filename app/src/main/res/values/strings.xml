@@ -75,5 +75,6 @@
     <string name="name_auth_code_activity">ServerAuthCodeActivity</string>
 
     <string name="server_client_id">AIzaSyBjoceaT38BTr5saWhrjA6e60smiw5wXNQ</string>
+    <string name="android_key_kkspetschicago">AIzaSyAWPMNyEtGXKTb1loyah6oJNk6TEigO7kw</string>
 </resources>
 

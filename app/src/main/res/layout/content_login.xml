@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.andreakim.kkspetsapp.LoginActivity"
+    tools:context="com.andreakim.kkspetschicago.LoginActivity"
     tools:showIn="@layout/activity_login">
 
 <LinearLayout
@@ -128,7 +128,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
         android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
         android:background="@drawable/mybutton"
         android:text="@string/home" />
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.andreakim.kkspetsapp;
+package com.andreakim.kkspetschicago;
 
 import android.app.Activity;
 import android.content.Intent;

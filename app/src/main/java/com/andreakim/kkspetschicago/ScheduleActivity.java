@@ -1,4 +1,4 @@
-package com.andreakim.kkspetsapp;
+package com.andreakim.kkspetschicago;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -12,10 +12,6 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
-
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
 
 public class ScheduleActivity extends AppCompatActivity {
 
