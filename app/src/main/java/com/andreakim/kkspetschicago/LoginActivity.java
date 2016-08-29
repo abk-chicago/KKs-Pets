@@ -243,7 +243,6 @@ public class LoginActivity extends AppCompatActivity implements
             mProgressDialog.setIndeterminate(true);
         }
 
-     //   mProgressDialog.show();
     }
 
     private void hideProgressDialog() {
@@ -252,23 +251,16 @@ public class LoginActivity extends AppCompatActivity implements
         }
     }
 
-
-
     @Override
     public void onStop() {
         super.onStop();
         hideProgressDialog();
     }
 
-
-
-
-
     private void updateUI(boolean signedIn) {
         if (signedIn) {
             findViewById(R.id.sign_in_button).setVisibility(View.GONE);
             findViewById(R.id.sign_out_button).setVisibility(View.VISIBLE);
-            //findViewById(R.id.disconnect_button).setVisibility(View.VISIBLE);
             findViewById(R.id.btn_schedule).setVisibility(View.VISIBLE);
             findViewById(R.id.btn_login).setVisibility(View.GONE);
             findViewById(R.id.others).setVisibility(View.GONE);
@@ -281,7 +273,6 @@ public class LoginActivity extends AppCompatActivity implements
 
             findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
             findViewById(R.id.sign_out_button).setVisibility(View.GONE);
-          //  findViewById(R.id.disconnect_button).setVisibility(View.GONE);
             findViewById(R.id.btn_schedule).setVisibility(View.GONE);
         }
     }
@@ -297,9 +288,7 @@ public class LoginActivity extends AppCompatActivity implements
                 findViewById(R.id.btn_login).setVisibility(View.VISIBLE);
                 findViewById(R.id.others).setVisibility(View.VISIBLE);
                 break;
-//            case R.id.disconnect_button:
-//                revokeAccess();
-//                break;
+
         }
     }
 }
