@@ -184,10 +184,11 @@ public class LoginActivity extends AppCompatActivity implements
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
-
+            System.out.println("AUTHENTICATION SUCCESSFUL");
 
         } else {
             // Signed out, show unauthenticated UI.
+            System.out.println("AUTHENTICATION UNSUCCESSFUL");
             updateUI(false);
         }
     }
